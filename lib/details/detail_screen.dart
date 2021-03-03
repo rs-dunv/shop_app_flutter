@@ -6,10 +6,8 @@ import 'package:flutter/services.dart';
 class DetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return AnnotatedRegion<SystemUiOverlayStyle>(
-        value: SystemUiOverlayStyle(
-          statusBarColor: Colors.transparent,
-        ),
-        child: BodyDetail());
+    return Scaffold(
+      body: BodyDetail(),
+    );
   }
 }
