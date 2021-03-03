@@ -13,6 +13,7 @@ class TitleAndMore extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
+      margin: EdgeInsets.only(bottom: kDefaultPadding / 2),
       child: Row(children: <Widget>[
         Container(
           child: Stack(
