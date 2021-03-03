@@ -1,3 +1,5 @@
+import 'package:ShopApp/constants.dart';
+import 'package:ShopApp/screens/home/components/card_and_featured.dart';
 import 'package:ShopApp/screens/home/components/card_recomend.dart';
 import 'package:ShopApp/screens/home/components/header_card.dart';
 import 'package:ShopApp/screens/home/components/title_and_more.dart';
@@ -19,7 +21,15 @@ class Body extends StatelessWidget {
             title: "Recommended",
             press: () {},
           ),
-          CardItemRecomend()
+          CardItemRecomend(),
+          TitleAndMore(
+            title: "Featured Plants",
+            press: () {},
+          ),
+          CardAndFeatured(),
+          SizedBox(
+            height: kDefaultPadding,
+          )
         ],
       ),
     );

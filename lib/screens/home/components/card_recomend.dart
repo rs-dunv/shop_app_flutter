@@ -1,4 +1,5 @@
 import 'package:ShopApp/constants.dart';
+import 'package:ShopApp/details/detail_screen.dart';
 import 'package:flutter/material.dart';
 
 class CardItemRecomend extends StatelessWidget {
@@ -17,28 +18,40 @@ class CardItemRecomend extends StatelessWidget {
             title: "Samantha",
             price: 430,
             country: "Russian",
-            press: () {},
+            press: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (content) => DetailScreen()));
+            },
           ),
           CardRecomend(
             image: "assets/images/image_2.png",
             title: "Samantha",
             price: 430,
             country: "Russian",
-            press: () {},
+            press: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (content) => DetailScreen()));
+            },
           ),
           CardRecomend(
             image: "assets/images/image_3.png",
             title: "Samantha",
             price: 430,
             country: "Russian",
-            press: () {},
+            press: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (content) => DetailScreen()));
+            },
           ),
           CardRecomend(
             image: "assets/images/image_1.png",
             title: "Samantha",
             price: 430,
             country: "Russian",
-            press: () {},
+            press: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (content) => DetailScreen()));
+            },
           )
         ],
       ),
@@ -61,32 +74,35 @@ class CardRecomend extends StatelessWidget {
       margin: EdgeInsets.only(
           left: kDefaultPadding,
           top: kDefaultPadding / 2,
-          bottom: kDefaultPadding * 2.5),
-      child: Column(children: <Widget>[
-        Image.asset(
-          "$image",
-          fit: BoxFit.cover,
-        ),
-        Container(
-            padding: EdgeInsets.all(kDefaultPadding / 2),
-            child: Row(children: <Widget>[
-              RichText(
-                  text: TextSpan(children: [
-                TextSpan(
-                    text: "$title\n".toUpperCase(),
-                    style: Theme.of(context).textTheme.button),
-                TextSpan(
-                    text: "$country".toUpperCase(),
-                    style: TextStyle(color: kPrimaryColor.withOpacity(0.5)))
-              ])),
-              Spacer(),
-              Text(
-                '\$$price',
-                style: TextStyle(
-                    color: kPrimaryColor, fontWeight: FontWeight.bold),
-              )
-            ]))
-      ]),
+          bottom: kDefaultPadding * 2),
+      child: GestureDetector(
+        onTap: press,
+        child: Column(children: <Widget>[
+          Image.asset(
+            "$image",
+            fit: BoxFit.cover,
+          ),
+          Container(
+              padding: EdgeInsets.all(kDefaultPadding / 2),
+              child: Row(children: <Widget>[
+                RichText(
+                    text: TextSpan(children: [
+                  TextSpan(
+                      text: "$title\n".toUpperCase(),
+                      style: Theme.of(context).textTheme.button),
+                  TextSpan(
+                      text: "$country".toUpperCase(),
+                      style: TextStyle(color: kPrimaryColor.withOpacity(0.5)))
+                ])),
+                Spacer(),
+                Text(
+                  '\$$price',
+                  style: TextStyle(
+                      color: kPrimaryColor, fontWeight: FontWeight.bold),
+                )
+              ]))
+        ]),
+      ),
       decoration: BoxDecoration(
           color: kBackgroundColor,
           borderRadius: BorderRadius.only(
