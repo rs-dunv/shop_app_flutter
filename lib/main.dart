@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flant App',
+      title: 'Flant App!',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
           primaryColor: kPrimaryColor,
